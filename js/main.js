@@ -360,9 +360,41 @@
     form.addEventListener("submit", (e) => {
       e.preventDefault();
       const btn = form.querySelector("button[type=submit]");
-      btn.innerHTML = "Sent ✓";
+      const originalHTML = btn.innerHTML;
+
+      // Loading state
+      btn.innerHTML = "Sending…";
       btn.style.pointerEvents = "none";
       btn.style.opacity = ".6";
+
+      const params = {
+        name:     form.querySelector('[name="name"]').value,
+        email:    form.querySelector('[name="email"]').value,
+        company:  form.querySelector('[name="company"]').value || "—",
+        help:     form.querySelector('[name="help"]').value,
+        budget:   form.querySelector('[name="budget"]').value,
+        timeline: form.querySelector('[name="timeline"]').value,
+        notes:    form.querySelector('[name="notes"]').value || "—",
+      };
+
+      // Send inquiry email to you
+      emailjs.send("service_i8754w6", "template_ytk4ark", params)
+        .then(() => {
+          // Send auto-reply to user
+          return emailjs.send("service_i8754w6", "template_qvmpg9l", params);
+        })
+        .then(() => {
+          btn.innerHTML = "Sent ✓";
+          btn.style.opacity = "1";
+          form.reset();
+        })
+        .catch((err) => {
+          console.error("EmailJS error:", err);
+          btn.innerHTML = originalHTML;
+          btn.style.pointerEvents = "auto";
+          btn.style.opacity = "1";
+          alert("Something went wrong. Please email us directly at design@ateliercortx.com");
+        });
     });
   }
 
