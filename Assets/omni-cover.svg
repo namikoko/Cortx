@@ -1,0 +1,95 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="800" fill="#F8F9FA"/>
+  
+  <!-- Background Pattern -->
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#E9ECEF" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="800" fill="url(#grid)" opacity="0.3"/>
+  
+  <!-- Phone Mockup -->
+  <g transform="translate(450, 100)">
+    <!-- Phone Frame -->
+    <rect x="0" y="0" width="300" height="600" rx="40" fill="#1A1A1A"/>
+    <rect x="12" y="12" width="276" height="576" rx="32" fill="#000"/>
+    
+    <!-- Screen -->
+    <rect x="20" y="40" width="260" height="520" rx="24" fill="#FFFFFF"/>
+    
+    <!-- Status Bar -->
+    <rect x="30" y="50" width="240" height="20" fill="#F8F9FA"/>
+    <text x="35" y="64" font-family="Inter" font-size="12" font-weight="500" fill="#6C757D">9:41</text>
+    <text x="235" y="64" font-family="Inter" font-size="12" font-weight="500" fill="#6C757D" text-anchor="end">100%</text>
+    
+    <!-- Header -->
+    <rect x="30" y="90" width="240" height="60" fill="#FFFFFF"/>
+    <text x="40" y="112" font-family="Inter" font-size="16" font-weight="600" fill="#1A1A1A">Benefits</text>
+    <text x="40" y="132" font-family="Inter" font-size="14" font-weight="400" fill="#6C757D">Your coverage at a glance</text>
+    
+    <!-- Benefit Cards -->
+    <rect x="30" y="170" width="240" height="80" rx="12" fill="#E3F2FD" stroke="#2196F3" stroke-width="1"/>
+    <text x="45" y="195" font-family="Inter" font-size="14" font-weight="600" fill="#1976D2">Health Insurance</text>
+    <text x="45" y="215" font-family="Inter" font-size="12" font-weight="400" fill="#1976D2">Active • $250 deductible</text>
+    <text x="45" y="235" font-family="Inter" font-size="12" font-weight="500" fill="#1976D2">Submit Claim</text>
+    
+    <rect x="30" y="270" width="240" height="80" rx="12" fill="#F3E5F5" stroke="#9C27B0" stroke-width="1"/>
+    <text x="45" y="295" font-family="Inter" font-size="14" font-weight="600" fill="#7B1FA2">Dental Insurance</text>
+    <text x="45" y="315" font-family="Inter" font-size="12" font-weight="400" fill="#7B1FA2">Active • $100 deductible</text>
+    <text x="45" y="335" font-family="Inter" font-size="12" font-weight="500" fill="#7B1FA2">Submit Claim</text>
+    
+    <rect x="30" y="370" width="240" height="80" rx="12" fill="#E8F5E8" stroke="#4CAF50" stroke-width="1"/>
+    <text x="45" y="395" font-family="Inter" font-size="14" font-weight="600" fill="#2E7D32">Retirement 401k</text>
+    <text x="45" y="415" font-family="Inter" font-size="12" font-weight="400" fill="#2E7D32">Contributing 6%</text>
+    <text x="45" y="435" font-family="Inter" font-size="12" font-weight="500" fill="#2E7D32">View Balance</text>
+    
+    <!-- Bottom Navigation -->
+    <rect x="20" y="520" width="260" height="60" fill="#F8F9FA"/>
+    <circle cx="80" cy="545" r="4" fill="#2196F3"/>
+    <text x="80" y="560" font-family="Inter" font-size="10" font-weight="500" fill="#2196F3" text-anchor="middle">Benefits</text>
+    
+    <circle cx="140" cy="545" r="3" fill="#9E9E9E"/>
+    <text x="140" y="560" font-family="Inter" font-size="10" font-weight="400" fill="#9E9E9E" text-anchor="middle">Claims</text>
+    
+    <circle cx="200" cy="545" r="3" fill="#9E9E9E"/>
+    <text x="200" y="560" font-family="Inter" font-size="10" font-weight="400" fill="#9E9E9E" text-anchor="middle">Profile</text>
+  </g>
+  
+  <!-- Logo -->
+  <g transform="translate(100, 70)">
+    <text x="0" y="0" font-family="Inter" font-size="48" font-weight="700" fill="#1A1A1A">Omni</text>
+    <text x="0" y="30" font-family="Inter" font-size="16" font-weight="400" fill="#6C757D">Benefits & Retirement</text>
+  </g>
+  
+  <!-- Features List -->
+  <g transform="translate(850, 150)">
+    <rect x="0" y="0" width="300" height="400" fill="#FFFFFF" rx="12" stroke="#E9ECEF"/>
+    <text x="20" y="35" font-family="Inter" font-size="18" font-weight="600" fill="#1A1A1A">Key Features</text>
+    
+    <g transform="translate(20, 60)">
+      <circle cx="6" cy="6" r="3" fill="#4CAF50"/>
+      <text x="20" y="10" font-family="Inter" font-size="14" font-weight="400" fill="#1A1A1A">Unified benefit cards</text>
+    </g>
+    
+    <g transform="translate(20, 100)">
+      <circle cx="6" cy="6" r="3" fill="#4CAF50"/>
+      <text x="20" y="10" font-family="Inter" font-size="14" font-weight="400" fill="#1A1A1A">Streamlined claims flow</text>
+    </g>
+    
+    <g transform="translate(20, 140)">
+      <circle cx="6" cy="6" r="3" fill="#4CAF50"/>
+      <text x="20" y="10" font-family="Inter" font-size="14" font-weight="400" fill="#1A1A1A">Apple Wallet integration</text>
+    </g>
+    
+    <g transform="translate(20, 180)">
+      <circle cx="6" cy="6" r="3" fill="#4CAF50"/>
+      <text x="20" y="10" font-family="Inter" font-size="14" font-weight="400" fill="#1A1A1A">Embedded telemedicine</text>
+    </g>
+    
+    <g transform="translate(20, 220)">
+      <circle cx="6" cy="6" r="3" fill="#4CAF50"/>
+      <text x="20" y="10" font-family="Inter" font-size="14" font-weight="400" fill="#1A1A1A">Biometric authentication</text>
+    </g>
+  </g>
+</svg>
