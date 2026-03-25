@@ -357,11 +357,38 @@
   function initForm() {
     const form = document.getElementById("contact-form");
     if (!form) return;
-    form.addEventListener("submit", () => {
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
       const btn = form.querySelector("button[type=submit]");
+      const originalHTML = btn.innerHTML;
+
       btn.innerHTML = "Sending…";
       btn.style.pointerEvents = "none";
       btn.style.opacity = ".6";
+
+      const formData = new FormData(form);
+
+      fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData
+      })
+        .then(r => r.json())
+        .then(data => {
+          if (data.success) {
+            btn.innerHTML = "Sent ✓";
+            btn.style.opacity = "1";
+            const scrollPos = window.scrollY;
+            form.reset();
+            window.scrollTo(0, scrollPos);
+          } else {
+            throw new Error(data.message);
+          }
+        })
+        .catch(() => {
+          btn.innerHTML = originalHTML;
+          btn.style.pointerEvents = "auto";
+          btn.style.opacity = "1";
+        });
     });
   }
 
